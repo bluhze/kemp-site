@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { StaggerContainer, StaggerItem } from './ScrollReveal'
 
 const TIKTOK_USERNAME = 'thekempire'
 
@@ -46,14 +45,18 @@ export function TikTokSection() {
       .finally(() => setLoading(false))
   }, [])
 
-  // Load TikTok embed script when videos are rendered (script processes blockquotes)
+  // Load TikTok embed script when videos are rendered - script processes blockquotes on load
   useEffect(() => {
     if (videoIds.length === 0) return
     if (document.querySelector('script[src="https://www.tiktok.com/embed.js"]')) return
-    const script = document.createElement('script')
-    script.src = 'https://www.tiktok.com/embed.js'
-    script.async = true
-    document.body.appendChild(script)
+    // Small delay to ensure blockquotes are in the DOM and painted before script runs
+    const id = setTimeout(() => {
+      const script = document.createElement('script')
+      script.src = 'https://www.tiktok.com/embed.js'
+      script.async = true
+      document.body.appendChild(script)
+    }, 100)
+    return () => clearTimeout(id)
   }, [videoIds])
 
   return (
@@ -78,13 +81,11 @@ export function TikTokSection() {
             ))}
           </div>
         ) : videoIds.length > 0 ? (
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.15}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {videoIds.map((id) => (
-              <StaggerItem key={id}>
-                <TikTokEmbed videoId={id} />
-              </StaggerItem>
+              <TikTokEmbed key={id} videoId={id} />
             ))}
-          </StaggerContainer>
+          </div>
         ) : (
           <div className="text-center py-12">
             <p className="text-zinc-500 mb-4">Unable to load TikTok videos.</p>

@@ -17,7 +17,7 @@ function TweetEmbed() {
   }, [])
 
   return (
-    <div className="hidden lg:block w-full max-w-[400px] [&_.twitter-tweet]:!max-w-full">
+    <div className="hidden lg:block absolute left-6 bottom-[calc(4rem+120px)] w-full max-w-[400px] [&_.twitter-tweet]:!max-w-full">
       <blockquote className="twitter-tweet" data-dnt="true" data-theme="dark">
         <a href={TWEET_URL}>Tweet from @thekempire</a>
       </blockquote>
@@ -43,14 +43,13 @@ export function HeroSection() {
       </div>
 
       <motion.div
-        className="relative z-10 max-w-[1440px] mx-auto px-6 w-full flex flex-col lg:flex-row items-end justify-between gap-8 pb-16"
+        className="relative z-10 max-w-[1440px] mx-auto px-6 w-full h-full flex flex-col items-center justify-end pb-16"
         initial={false}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
-        <TweetEmbed />
-        <div className="max-w-2xl flex flex-col items-end text-right w-full lg:w-auto">
-          <div className="flex items-center gap-3 mb-6">
+        <div className="absolute right-6 top-[calc(50%+30px)] -translate-y-1/2 flex flex-col items-end text-right w-full max-w-2xl lg:max-w-xl">
+          <div className="flex items-center justify-end gap-3 mb-6">
             <Image
               src="/icon.png"
               alt="KEMPIRE"
@@ -59,28 +58,38 @@ export function HeroSection() {
               className="w-12 h-12 object-contain"
             />
           </div>
-
-          <p className="font-display text-3xl md:text-4xl lg:text-5xl font-normal tracking-wide leading-[1.2] mb-6 text-balance hero-text-gradient uppercase">
+          <p className="font-display text-3xl md:text-4xl lg:text-5xl font-normal tracking-wide leading-[1.2] text-balance hero-text-gradient uppercase">
             Your #1 source for Pop Culture News in Music, Entertainment, Reality TV and more.
           </p>
+        </div>
 
-          <div className="flex items-center justify-end gap-6 mt-8">
-            <button className="bg-kempire-gold hover:bg-white hover:text-kempire-dark text-kempire-dark px-8 py-4 font-bold uppercase tracking-wider text-sm transition flex items-center gap-2 rounded-sm">
-              <i className="ph-fill ph-play" /> Watch Now
-            </button>
-            <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-red-600 transition">
-                <i className="ph-fill ph-bell text-lg" />
-              </div>
-              <span className="font-semibold text-sm uppercase tracking-wide">Subscribe on YouTube</span>
-            </a>
-            <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-[#1DA1F2] transition">
-                <i className="ph-fill ph-twitter-logo text-lg" />
-              </div>
-              <span className="font-semibold text-sm uppercase tracking-wide">Follow on Twitter</span>
-            </a>
-          </div>
+        <TweetEmbed />
+
+        <div className="flex items-center justify-center gap-[50px] shrink-0 w-full">
+          <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
+            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-red-600 transition">
+              <i className="ph-fill ph-bell text-lg" />
+            </div>
+            <span className="font-semibold text-sm uppercase tracking-wide">Subscribe on YouTube</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
+            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-[#1DA1F2] transition">
+              <i className="ph-fill ph-twitter-logo text-lg" />
+            </div>
+            <span className="font-semibold text-sm uppercase tracking-wide">Follow on Twitter</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
+            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-black transition">
+              <i className="ph-fill ph-tiktok-logo text-lg" />
+            </div>
+            <span className="font-semibold text-sm uppercase tracking-wide">Follow on TikTok</span>
+          </a>
+          <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
+            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-[#E4405F] transition">
+              <i className="ph-fill ph-instagram-logo text-lg" />
+            </div>
+            <span className="font-semibold text-sm uppercase tracking-wide">Follow on Instagram</span>
+          </a>
         </div>
       </motion.div>
     </section>

@@ -88,38 +88,40 @@ export function Sidebar() {
           </nav>
 
           {/* Social & Search */}
-          <div className="relative p-4 border-t border-white/10 space-y-4">
-            <div className="absolute -top-4 left-0 right-0 flex justify-center pointer-events-none z-10">
+          <div className="flex flex-col flex-1 min-h-0 p-4 border-t border-white/10">
+            <div className="flex justify-center shrink-0">
               <Image
-                src="/sidebar-portrait.png"
+                src="/sidebar-portrait.png?v=2"
                 alt=""
-                width={194}
+                width={250}
                 height={250}
-                className="h-[250px] min-h-[250px] w-auto object-contain"
+                className="h-[250px] w-auto object-contain object-bottom"
                 aria-hidden
               />
             </div>
-            <div className="flex items-center gap-3 pt-[260px]">
-              <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="YouTube">
-                <i className="ph-fill ph-youtube-logo text-xl" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="TikTok">
-                <i className="ph-fill ph-tiktok-logo text-xl" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Twitter">
-                <i className="ph-fill ph-twitter-logo text-xl" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Instagram">
-                <i className="ph-fill ph-instagram-logo text-xl" />
-              </a>
+            <div className="flex flex-col space-y-4 mt-4">
+              <div className="flex items-center gap-3">
+                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="YouTube">
+                  <i className="ph-fill ph-youtube-logo text-xl" />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="TikTok">
+                  <i className="ph-fill ph-tiktok-logo text-xl" />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Twitter">
+                  <i className="ph-fill ph-twitter-logo text-xl" />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Instagram">
+                  <i className="ph-fill ph-instagram-logo text-xl" />
+                </a>
+              </div>
+              <button
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10 transition font-medium text-sm text-white"
+                aria-label="Search"
+              >
+                <i className="ph ph-magnifying-glass text-xl" />
+                Search
+              </button>
             </div>
-            <button
-              className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10 transition font-medium text-sm text-white"
-              aria-label="Search"
-            >
-              <i className="ph ph-magnifying-glass text-xl" />
-              Search
-            </button>
           </div>
         </div>
       </aside>
