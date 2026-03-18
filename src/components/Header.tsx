@@ -29,10 +29,10 @@ export function Header() {
 
         <div className="flex items-center gap-5">
           <div className="hidden md:flex items-center gap-4 text-zinc-600">
-            <a href="#" className="hover:text-kempire-gold transition" aria-label="YouTube"><i className="ph-fill ph-youtube-logo text-xl" /></a>
-            <a href="#" className="hover:text-kempire-gold transition" aria-label="TikTok"><i className="ph-fill ph-tiktok-logo text-xl" /></a>
-            <a href="#" className="hover:text-kempire-gold transition" aria-label="Twitter"><i className="ph-fill ph-twitter-logo text-xl" /></a>
-            <a href="#" className="hover:text-kempire-gold transition" aria-label="Instagram"><i className="ph-fill ph-instagram-logo text-xl" /></a>
+            <a href="https://www.youtube.com/channel/UCXgUrYSScF2wKhMpru-u-Eg" target="_blank" rel="noopener noreferrer" className="hover:text-kempire-gold transition" aria-label="YouTube"><i className="ph-fill ph-youtube-logo text-xl" /></a>
+            <a href="https://www.tiktok.com/@thekempire" target="_blank" rel="noopener noreferrer" className="hover:text-kempire-gold transition" aria-label="TikTok"><i className="ph-fill ph-tiktok-logo text-xl" /></a>
+            <a href="https://x.com/TheKempire" target="_blank" rel="noopener noreferrer" className="hover:text-kempire-gold transition" aria-label="Twitter"><i className="ph-fill ph-twitter-logo text-xl" /></a>
+            <a href="https://www.instagram.com/thekempire" target="_blank" rel="noopener noreferrer" className="hover:text-kempire-gold transition" aria-label="Instagram"><i className="ph-fill ph-instagram-logo text-xl" /></a>
           </div>
           <div className="w-px h-6 bg-zinc-200 hidden md:block" />
           <button className="text-zinc-900 hover:text-kempire-gold transition" aria-label="Search">

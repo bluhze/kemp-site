@@ -1,12 +1,9 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 import { StaggerContainer, StaggerItem } from './ScrollReveal'
 
 export function AboutSection() {
-  const [videoEnded, setVideoEnded] = useState(false)
-
   return (
     <section className="py-24 overflow-hidden" style={{ backgroundColor: '#d4a124' }}>
       <StaggerContainer className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[35fr_65fr] gap-12 md:gap-16 items-center" staggerDelay={0.1}>
@@ -19,37 +16,17 @@ export function AboutSection() {
               }}
             />
             <div className="absolute inset-[5px] z-10 rounded-full overflow-hidden">
-              {videoEnded ? (
-                <Image
-                  src="/about-avatar-static.png"
-                  alt="The Kempire"
-                  width={256}
-                  height={256}
-                  className="w-full h-full object-cover rounded-full object-top"
-                />
-              ) : (
-                <video
-                  src="/about-avatar.mp4"
-                  autoPlay
-                  muted
-                  playsInline
-                  onEnded={() => setVideoEnded(true)}
-                  className="w-full h-full object-cover rounded-full object-top"
-                  aria-label="The Kempire"
-                />
-              )}
+              <Image
+                src="/about-avatar-static.png"
+                alt="The Kempire"
+                width={256}
+                height={256}
+                className="w-full h-full object-cover rounded-full object-top"
+              />
             </div>
           </div>
         </StaggerItem>
         <StaggerItem className="flex flex-col md:items-start md:text-left text-center">
-          <Image
-            src="/crown.png"
-            alt=""
-            width={48}
-            height={48}
-            className="w-12 h-12 object-contain mb-6"
-            aria-hidden
-          />
           <h3 className="font-sans font-bold text-sm tracking-[0.3em] uppercase text-white/90 mb-4">You&apos;ve Now Entered</h3>
           <h2 className="font-display text-5xl font-normal tracking-wider text-white mb-8 uppercase">THE KEMPIRE</h2>
           <p className="text-xl text-white/90 font-light leading-relaxed mb-8 max-w-xl text-balance">
@@ -57,7 +34,7 @@ export function AboutSection() {
           </p>
           <div className="flex items-center gap-2">
             <span className="w-8 h-px bg-white/70" />
-            <span className="font-bold tracking-widest text-sm uppercase text-white">K Empire</span>
+            <span className="font-bold tracking-widest text-sm uppercase text-white">Kempire</span>
             <span className="w-8 h-px bg-white/70" />
           </div>
         </StaggerItem>

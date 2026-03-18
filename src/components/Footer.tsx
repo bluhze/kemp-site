@@ -15,19 +15,17 @@ export function Footer() {
         />
 
         <div className="flex gap-6 text-zinc-600 justify-center">
-          <a href="#" className="hover:text-kempire-gold transition" aria-label="YouTube"><i className="ph-fill ph-youtube-logo text-2xl" /></a>
-          <a href="#" className="hover:text-kempire-gold transition" aria-label="TikTok"><i className="ph-fill ph-tiktok-logo text-2xl" /></a>
-          <a href="#" className="hover:text-kempire-gold transition" aria-label="Twitter"><i className="ph-fill ph-twitter-logo text-2xl" /></a>
-          <a href="#" className="hover:text-kempire-gold transition" aria-label="Instagram"><i className="ph-fill ph-instagram-logo text-2xl" /></a>
-          <a href="#" className="hover:text-kempire-gold transition" aria-label="Facebook"><i className="ph-fill ph-facebook-logo text-2xl" /></a>
+          <a href="https://www.youtube.com/channel/UCXgUrYSScF2wKhMpru-u-Eg" target="_blank" rel="noopener noreferrer" className="hover:text-kempire-gold transition" aria-label="YouTube"><i className="ph-fill ph-youtube-logo text-2xl" /></a>
+          <a href="https://www.tiktok.com/@thekempire" target="_blank" rel="noopener noreferrer" className="hover:text-kempire-gold transition" aria-label="TikTok"><i className="ph-fill ph-tiktok-logo text-2xl" /></a>
+          <a href="https://x.com/TheKempire" target="_blank" rel="noopener noreferrer" className="hover:text-kempire-gold transition" aria-label="Twitter"><i className="ph-fill ph-twitter-logo text-2xl" /></a>
+          <a href="https://www.instagram.com/thekempire" target="_blank" rel="noopener noreferrer" className="hover:text-kempire-gold transition" aria-label="Instagram"><i className="ph-fill ph-instagram-logo text-2xl" /></a>
+          <a href="https://www.facebook.com/TheKempire/" target="_blank" rel="noopener noreferrer" className="hover:text-kempire-gold transition" aria-label="Facebook"><i className="ph-fill ph-facebook-logo text-2xl" /></a>
         </div>
 
         <div className="flex items-center justify-center gap-4 flex-wrap text-xs text-zinc-500 font-medium tracking-wide">
           <span>© 2026 The Kempire</span>
           <span className="w-1 h-1 bg-zinc-400 rounded-full" />
           <a href="#" className="hover:text-zinc-900 transition">Privacy Policy</a>
-          <span className="w-1 h-1 bg-zinc-400 rounded-full" />
-          <span>Site by Komposition</span>
         </div>
       </div>
     </footer>

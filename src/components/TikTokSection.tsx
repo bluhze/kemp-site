@@ -2,25 +2,20 @@
 
 import { useEffect, useState } from 'react'
 
-const TIKTOK_USERNAME = 'thekempire'
-
 function TikTokEmbed({ videoId }: { videoId: string }) {
-  const videoUrl = `https://www.tiktok.com/@${TIKTOK_USERNAME}/video/${videoId}`
+  const embedUrl = `https://www.tiktok.com/player/v1/${videoId}`
   return (
     <div className="flex justify-center">
-      <blockquote
-        className="tiktok-embed"
-        cite={videoUrl}
-        data-video-id={videoId}
-        data-embed-from="oembed"
-        style={{ maxWidth: '605px', minWidth: '325px' }}
-      >
-        <section>
-          <a target="_blank" rel="noopener noreferrer" href={videoUrl}>
-            View on TikTok
-          </a>
-        </section>
-      </blockquote>
+      <iframe
+        src={embedUrl}
+        width="325"
+        height="575"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title={`TikTok video ${videoId}`}
+        className="rounded-lg max-w-full"
+      />
     </div>
   )
 }
@@ -45,19 +40,6 @@ export function TikTokSection() {
       .finally(() => setLoading(false))
   }, [])
 
-  // Load TikTok embed script when videos are rendered - script processes blockquotes on load
-  useEffect(() => {
-    if (videoIds.length === 0) return
-    if (document.querySelector('script[src="https://www.tiktok.com/embed.js"]')) return
-    // Small delay to ensure blockquotes are in the DOM and painted before script runs
-    const id = setTimeout(() => {
-      const script = document.createElement('script')
-      script.src = 'https://www.tiktok.com/embed.js'
-      script.async = true
-      document.body.appendChild(script)
-    }, 100)
-    return () => clearTimeout(id)
-  }, [videoIds])
 
   return (
     <section className="py-24 bg-kempire-gray">

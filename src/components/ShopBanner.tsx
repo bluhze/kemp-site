@@ -4,10 +4,26 @@ import Image from 'next/image'
 import { StaggerContainer, StaggerItem } from './ScrollReveal'
 
 const products = [
-  { src: '/shop-tshirt.png', name: 'Are You OK?! T-Shirt', price: 'TBD' },
-  { src: '/shop-hat.png', name: 'Are You OK?! Snapback Hat', price: 'TBD' },
-  { src: '/shop-sweatshirt.png', name: 'Are You OK?! Sweatshirt', price: 'TBD' },
-  { src: '/shop-mug.png', name: 'Are You OK?! Mug', price: 'TBD' },
+  {
+    src: '/shop-crewneck-sweatshirt.png',
+    name: 'Are You Ok?! Crewneck Sweatshirt (Black)',
+    link: 'https://hausofkempire.com/products/are-you-ok-crewneck-sweatshirt-black',
+  },
+  {
+    src: '/shop-cap.png',
+    name: 'Are You Ok?! Cap',
+    link: 'https://hausofkempire.com/products/are-you-ok-cap',
+  },
+  {
+    src: '/shop-tve-tee.png',
+    name: 'Kempire After Dark TVE Super-Soft Tee',
+    link: 'https://hausofkempire.com/products/kempire-after-dark-tve-super-soft-tee',
+  },
+  {
+    src: '/shop-tve-sweatshirt.png',
+    name: 'Kempire After Dark TVE Live Tour Sweatshirt',
+    link: 'https://hausofkempire.com/products/kempire-after-dark-tve-live-tour-sweatshirt',
+  },
 ]
 
 export function ShopBanner() {
@@ -24,19 +40,26 @@ export function ShopBanner() {
           </div>
         </StaggerItem>
         <StaggerItem>
-          <button className="border-2 border-white text-white px-8 py-3 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-[#d4a124] transition">
+          <a
+            href="https://hausofkempire.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border-2 border-white text-white px-8 py-3 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-[#d4a124] transition"
+          >
             Visit Store
-          </button>
+          </a>
         </StaggerItem>
       </StaggerContainer>
 
       <div className="max-w-[1440px] mx-auto px-6 pb-16">
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.1}>
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch" staggerDelay={0.1}>
           {products.map((product) => (
-            <StaggerItem key={product.src} className="group">
+            <StaggerItem key={product.link} className="group h-full">
               <a
-                href="#"
-                className="block rounded-lg overflow-hidden hover:opacity-95 transition relative"
+                href={product.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full rounded-lg overflow-hidden hover:opacity-95 transition relative flex flex-col"
               >
                 <div
                   className="absolute -inset-[5px] rounded-lg animate-gradient-border"
@@ -44,8 +67,8 @@ export function ShopBanner() {
                     background: 'conic-gradient(from 0deg, #d4a124, #121212, #e8c04a, #d4a124)',
                   }}
                 />
-                <div className="relative z-10 m-[5px] rounded-md bg-white overflow-hidden">
-                  <div className="relative aspect-square bg-white">
+                <div className="relative z-10 m-[5px] rounded-md bg-white overflow-hidden flex flex-col flex-1 min-h-0">
+                  <div className="relative aspect-square bg-white flex-shrink-0">
                     <Image
                       src={product.src}
                       alt={product.name}
@@ -54,9 +77,8 @@ export function ShopBanner() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
                   </div>
-                  <div className="p-4 text-center border-t border-zinc-200">
+                  <div className="p-4 text-center border-t border-zinc-200 flex-1 flex items-center justify-center">
                     <p className="font-display text-lg text-zinc-900 uppercase tracking-wide">{product.name}</p>
-                    <p className="text-kempire-gold text-sm font-semibold mt-1">{product.price}</p>
                   </div>
                 </div>
               </a>

@@ -88,29 +88,18 @@ export function Sidebar() {
           </nav>
 
           {/* Social & Search */}
-          <div className="flex flex-col flex-1 min-h-0 p-4 border-t border-white/10">
-            <div className="flex justify-center shrink-0">
-              <Image
-                src="/sidebar-portrait.png?v=2"
-                alt=""
-                width={250}
-                height={250}
-                className="h-[250px] w-auto object-contain object-bottom"
-                aria-hidden
-              />
-            </div>
-            <div className="flex flex-col space-y-4 mt-4">
+          <div className="flex flex-col shrink-0 mt-auto p-4 border-t border-white/10 space-y-4">
               <div className="flex items-center gap-3">
-                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="YouTube">
+                <a href="https://www.youtube.com/channel/UCXgUrYSScF2wKhMpru-u-Eg" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="YouTube">
                   <i className="ph-fill ph-youtube-logo text-xl" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@thekempire" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="TikTok">
                   <i className="ph-fill ph-tiktok-logo text-xl" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Twitter">
+                <a href="https://x.com/TheKempire" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Twitter">
                   <i className="ph-fill ph-twitter-logo text-xl" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Instagram">
+                <a href="https://www.instagram.com/thekempire" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Instagram">
                   <i className="ph-fill ph-instagram-logo text-xl" />
                 </a>
               </div>
@@ -121,7 +110,6 @@ export function Sidebar() {
                 <i className="ph ph-magnifying-glass text-xl" />
                 Search
               </button>
-            </div>
           </div>
         </div>
       </aside>

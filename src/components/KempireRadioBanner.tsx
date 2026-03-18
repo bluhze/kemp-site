@@ -15,10 +15,34 @@ export function KempireRadioBanner() {
             <p className="text-white/90">Listen to the latest episodes and pop culture talk.</p>
           </div>
         </StaggerItem>
-        <StaggerItem>
-          <button className="border-2 border-white text-white px-8 py-3 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-[#d4a124] transition">
-            Listen Now
-          </button>
+        <StaggerItem className="flex items-center gap-4">
+          <a
+            href="https://www.amazon.com/Kempire-Radio/dp/B08JJPXGTP"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#d4a124] transition"
+            aria-label="Listen on Amazon Music"
+          >
+            <i className="ph-fill ph-amazon-logo text-2xl" />
+          </a>
+          <a
+            href="https://open.spotify.com/show/2Vc9qrpg8lucrQqWuNaThD"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-[#1DB954] hover:text-white transition"
+            aria-label="Listen on Spotify"
+          >
+            <i className="ph-fill ph-spotify-logo text-2xl" />
+          </a>
+          <a
+            href="https://podcasts.apple.com/us/podcast/kempire-king-of-pop-culture/id1510062385"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#d4a124] transition"
+            aria-label="Listen on Apple Podcasts"
+          >
+            <i className="ph-fill ph-apple-podcasts-logo text-2xl" />
+          </a>
         </StaggerItem>
       </StaggerContainer>
     </section>

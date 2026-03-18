@@ -66,25 +66,25 @@ export function HeroSection() {
         <TweetEmbed />
 
         <div className="flex items-center justify-center gap-[50px] shrink-0 w-full">
-          <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
+          <a href="https://www.youtube.com/channel/UCXgUrYSScF2wKhMpru-u-Eg" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-red-600 transition">
               <i className="ph-fill ph-bell text-lg" />
             </div>
             <span className="font-semibold text-sm uppercase tracking-wide">Subscribe on YouTube</span>
           </a>
-          <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
+          <a href="https://x.com/TheKempire" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-[#1DA1F2] transition">
               <i className="ph-fill ph-twitter-logo text-lg" />
             </div>
             <span className="font-semibold text-sm uppercase tracking-wide">Follow on Twitter</span>
           </a>
-          <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
+          <a href="https://www.tiktok.com/@thekempire" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-black transition">
               <i className="ph-fill ph-tiktok-logo text-lg" />
             </div>
             <span className="font-semibold text-sm uppercase tracking-wide">Follow on TikTok</span>
           </a>
-          <a href="#" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
+          <a href="https://www.instagram.com/thekempire" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-[#E4405F] transition">
               <i className="ph-fill ph-instagram-logo text-lg" />
             </div>

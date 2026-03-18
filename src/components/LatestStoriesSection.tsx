@@ -11,16 +11,6 @@ interface YouTubeVideo {
   publishedAt: string
 }
 
-function formatTimeAgo(dateStr: string): string {
-  const date = new Date(dateStr)
-  const now = new Date()
-  const seconds = Math.floor((now.getTime() - date.getTime()) / 1000)
-  if (seconds < 3600) return `${Math.floor(seconds / 60)} min ago`
-  if (seconds < 86400) return `${Math.floor(seconds / 3600)} hours ago`
-  if (seconds < 604800) return `${Math.floor(seconds / 86400)} days ago`
-  return date.toLocaleDateString()
-}
-
 function VideoCardSkeleton({ featured }: { featured?: boolean }) {
   if (featured) {
     return (
@@ -83,12 +73,6 @@ function VideoCard({
         </a>
 
         <div className="flex flex-col justify-center pr-8">
-          <div className="flex items-center gap-3 mb-3 text-xs font-semibold uppercase tracking-wider text-zinc-500">
-            <span>By The Kempire</span>
-            <span className="w-1 h-1 rounded-full bg-zinc-300" />
-            <span>{formatTimeAgo(video.publishedAt)}</span>
-          </div>
-
           <a href={youtubeUrl} target="_blank" rel="noopener noreferrer">
             <h3 className="font-display text-3xl md:text-4xl font-normal leading-tight group-hover:text-kempire-gold transition decoration-2 decoration-kempire-gold underline-offset-4 tracking-wide">
               {video.title}
