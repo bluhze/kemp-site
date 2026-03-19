@@ -19,7 +19,7 @@ export function Sidebar() {
       {/* Mobile menu button */}
       <button
         onClick={() => setMobileOpen(true)}
-        className="lg:hidden fixed top-4 left-4 z-50 w-12 h-12 rounded-lg bg-kempire-dark text-white flex items-center justify-center hover:bg-zinc-800 transition"
+        className="lg:hidden fixed top-4 left-4 z-50 w-12 h-12 rounded-lg bg-kempire-dark text-white flex items-center justify-center hover:bg-zinc-800 transition max-w-[calc(100vw-2rem)]"
         aria-label="Open menu"
       >
         <i className="ph ph-list text-2xl" />
@@ -50,21 +50,21 @@ export function Sidebar() {
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="relative p-6 border-b border-white/10 flex justify-center">
+          <div className="relative p-4 md:p-6 border-b border-white/10 flex justify-center items-center min-w-0">
             <button
               onClick={() => setMobileOpen(false)}
-              className="lg:hidden absolute top-4 right-4 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white"
+              className="lg:hidden absolute top-4 right-4 min-w-[44px] min-h-[44px] w-11 h-11 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white shrink-0"
               aria-label="Close menu"
             >
               <i className="ph ph-x text-xl" />
             </button>
-            <Link href="/" className="block flex justify-center" onClick={() => setMobileOpen(false)}>
+            <Link href="/" className="block flex justify-center min-w-0 max-w-full" onClick={() => setMobileOpen(false)}>
               <Image
                 src="/logo-sidebar.png"
                 alt="KEMPIRE - King of Pop Culture"
                 width={180}
                 height={64}
-                className="h-12 w-auto object-contain [filter:brightness(0)_invert(1)]"
+                className="h-10 md:h-12 w-auto max-w-full object-contain [filter:brightness(0)_invert(1)]"
               />
             </Link>
           </div>
@@ -90,16 +90,16 @@ export function Sidebar() {
           {/* Social & Search */}
           <div className="flex flex-col shrink-0 mt-auto p-4 border-t border-white/10 space-y-4">
               <div className="flex items-center gap-3">
-                <a href="https://www.youtube.com/channel/UCXgUrYSScF2wKhMpru-u-Eg" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="YouTube">
+                <a href="https://www.youtube.com/channel/UCXgUrYSScF2wKhMpru-u-Eg" target="_blank" rel="noopener noreferrer" className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="YouTube">
                   <i className="ph-fill ph-youtube-logo text-xl" />
                 </a>
-                <a href="https://www.tiktok.com/@thekempire" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@thekempire" target="_blank" rel="noopener noreferrer" className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="TikTok">
                   <i className="ph-fill ph-tiktok-logo text-xl" />
                 </a>
-                <a href="https://x.com/TheKempire" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Twitter">
+                <a href="https://x.com/TheKempire" target="_blank" rel="noopener noreferrer" className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Twitter">
                   <i className="ph-fill ph-twitter-logo text-xl" />
                 </a>
-                <a href="https://www.instagram.com/thekempire" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Instagram">
+                <a href="https://www.instagram.com/thekempire" target="_blank" rel="noopener noreferrer" className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-lg flex items-center justify-center hover:bg-white/10 transition text-white" aria-label="Instagram">
                   <i className="ph-fill ph-instagram-logo text-xl" />
                 </a>
               </div>

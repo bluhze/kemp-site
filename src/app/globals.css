@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Skip link: visually hidden until focused */
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background-color: #d4af37;
+  color: white;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Visible focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
 .text-balance {
   text-wrap: balance;
 }

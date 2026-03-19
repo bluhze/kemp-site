@@ -48,8 +48,8 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
-        <div className="absolute right-6 top-[calc(50%+30px)] -translate-y-1/2 flex flex-col items-end text-right w-full max-w-2xl lg:max-w-xl">
-          <div className="flex items-center justify-end gap-3 mb-6">
+        <div className="absolute left-6 right-6 md:left-auto md:right-6 top-[calc(50%+30px)] -translate-y-1/2 flex flex-col items-center text-center md:items-end md:text-right w-full max-w-2xl md:ml-auto lg:max-w-xl">
+          <div className="flex items-center justify-center md:justify-end gap-3 mb-6">
             <Image
               src="/icon.png"
               alt="KEMPIRE"
@@ -58,37 +58,37 @@ export function HeroSection() {
               className="w-12 h-12 object-contain"
             />
           </div>
-          <p className="font-display text-3xl md:text-4xl lg:text-5xl font-normal tracking-wide leading-[1.2] text-balance hero-text-gradient uppercase">
+          <h1 className="font-display text-5xl md:text-4xl lg:text-5xl font-normal tracking-wide leading-[1.2] text-balance hero-text-gradient uppercase">
             Your #1 source for Pop Culture News in Music, Entertainment, Reality TV and more.
-          </p>
+          </h1>
         </div>
 
         <TweetEmbed />
 
-        <div className="flex items-center justify-center gap-[50px] shrink-0 w-full">
-          <a href="https://www.youtube.com/channel/UCXgUrYSScF2wKhMpru-u-Eg" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-red-600 transition">
+        <div className="flex flex-row items-center justify-between md:justify-center gap-2 md:gap-6 lg:gap-8 xl:gap-[50px] w-full max-w-full px-4 md:px-0">
+          <a href="https://www.youtube.com/channel/UCXgUrYSScF2wKhMpru-u-Eg" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube" className="flex items-center justify-center md:justify-start gap-3 text-white hover:text-zinc-300 transition group/sub">
+            <div className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-red-600 transition shrink-0">
               <i className="ph-fill ph-bell text-lg" />
             </div>
-            <span className="font-semibold text-sm uppercase tracking-wide">Subscribe on YouTube</span>
+            <span className="hidden md:inline font-semibold text-sm uppercase tracking-wide">Subscribe on YouTube</span>
           </a>
-          <a href="https://x.com/TheKempire" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-[#1DA1F2] transition">
+          <a href="https://x.com/TheKempire" target="_blank" rel="noopener noreferrer" aria-label="Follow on Twitter" className="flex items-center justify-center md:justify-start gap-3 text-white hover:text-zinc-300 transition group/sub">
+            <div className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-[#1DA1F2] transition shrink-0">
               <i className="ph-fill ph-twitter-logo text-lg" />
             </div>
-            <span className="font-semibold text-sm uppercase tracking-wide">Follow on Twitter</span>
+            <span className="hidden md:inline font-semibold text-sm uppercase tracking-wide">Follow on Twitter</span>
           </a>
-          <a href="https://www.tiktok.com/@thekempire" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-black transition">
+          <a href="https://www.tiktok.com/@thekempire" target="_blank" rel="noopener noreferrer" aria-label="Follow on TikTok" className="flex items-center justify-center md:justify-start gap-3 text-white hover:text-zinc-300 transition group/sub">
+            <div className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-black transition shrink-0">
               <i className="ph-fill ph-tiktok-logo text-lg" />
             </div>
-            <span className="font-semibold text-sm uppercase tracking-wide">Follow on TikTok</span>
+            <span className="hidden md:inline font-semibold text-sm uppercase tracking-wide">Follow on TikTok</span>
           </a>
-          <a href="https://www.instagram.com/thekempire" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-zinc-300 transition group/sub shrink-0">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-[#E4405F] transition">
+          <a href="https://www.instagram.com/thekempire" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram" className="flex items-center justify-center md:justify-start gap-3 text-white hover:text-zinc-300 transition group/sub">
+            <div className="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full bg-white/10 flex items-center justify-center group-hover/sub:bg-[#E4405F] transition shrink-0">
               <i className="ph-fill ph-instagram-logo text-lg" />
             </div>
-            <span className="font-semibold text-sm uppercase tracking-wide">Follow on Instagram</span>
+            <span className="hidden md:inline font-semibold text-sm uppercase tracking-wide">Follow on Instagram</span>
           </a>
         </div>
       </motion.div>
